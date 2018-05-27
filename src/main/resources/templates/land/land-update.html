@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!--触屏适配-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	    <title>土地修改</title>
+	
+	    <!-- Bootstrap -->
+	    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="../css/user-a.css"/>
+	    <link rel="stylesheet" href="../component/font-awesome-4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<!--导航栏-->
+				<div id="lefttt-a" align="center" class="col-xs-2 col-sm-2 col-md-2">
+					<div id="nav-pic-a" >
+						<i class="fa fa-anchor"></i>
+					</div>
+					<div id="nav-title-a">
+						农场土地管理
+						<div class="nav-sub-title-a"> 
+							<a href="./land-select.html">土地查询</a>
+						</div>
+						<div class="nav-sub-title-a">
+							<a href="./land-add.html">土地添加</a>
+						</div>
+					</div>
+				</div>
+				<!--内容展示-->
+	  			<div id="righttt-a" class="col-xs-10 col-sm-10 col-md-10">
+	  				<div id="rightt-title-a">
+	  					土地修改--<span style="color:red">1号土地</span>
+	  				</div>
+	  				<div id="rightt-content-a">
+	  					<div class="bs-docs-example">
+							<form action="" method="post">
+								<table id="del-tb" class="table table-striped table-bordered" >
+									<tbody>
+										<tr>
+											<td>土地编号</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>所属基地</td>
+											<td><input type="text" value="大渡口基地"></td>
+										</tr>
+										<tr>
+											<td>持有人</td>
+											<td><input type="text" value="杨睿"></td>
+										</tr>
+										<tr>
+											<td>土地名称</td>
+											<td><input type="text" value="持有人自定义"></td>
+										</tr>
+										<tr>
+											<td>面积</td>
+											<td><input type="text" value="20">平米</td>
+										</tr>
+										<tr>
+											<td>土地状态</td>
+											<td><input type="text" value="已租"></td>
+										</tr>
+										<tr>
+											<td>价格</td>
+											<td><input type="text" value="1288">元</td>
+										</tr>
+										<tr>
+											<td>持有时限</td>
+											<td><input type="text" value="2018-01-01">至<input type="text" value="2019-01-01"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input class="btn btn-primary" style="margin-left: 100px;width: 300px;" type="submit" id="" name="" value="更新信息" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+	  			</div>	
+	  		</div>
+		</div>
+	</body>
+	
+</html>

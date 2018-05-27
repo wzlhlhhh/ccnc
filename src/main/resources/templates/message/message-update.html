@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!--触屏适配-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	    <title>消息修改</title>
+	
+	    <!-- Bootstrap -->
+	    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="../css/user-a.css"/>
+	    <link rel="stylesheet" href="../component/font-awesome-4.7.0/css/font-awesome.min.css">
+	    <script src="../js/wangEditor.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<!--导航栏-->
+				<div id="lefttt-a" align="center" class="col-xs-2 col-sm-2 col-md-2">
+					<div id="nav-pic-a" >
+						<i class="fa fa-bell"></i>
+					</div>
+					<div id="nav-title-a">
+						农场消息管理
+						<div class="nav-sub-title-a"> 
+							<a href="./message-select.html">消息查询</a>
+						</div>
+						<div class="nav-sub-title-a">
+							<a href="./message-add.html">消息添加</a>
+						</div>
+					</div>
+				</div>
+				<!--内容展示-->
+	  			<div id="righttt-a" class="col-xs-10 col-sm-10 col-md-10">
+	  				<div id="rightt-title-a">
+	  					消息修改--<span style="color:red">1号消息</span>
+	  				</div>
+	  				<div id="rightt-content-a">
+	  					<div class="bs-docs-example">
+							<form action="" method="post">
+								<table id="del-tb" class="table table-striped table-bordered" >
+									<tbody>
+										<tr>
+											<td>消息编号</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>消息题目</td>
+											<td><input type="text" value="打折消息"></td>
+										</tr>
+										<tr>
+											<td>推送对象</td>
+											<td><input type="text" value="ALL"></td>
+										</tr>
+										<tr>
+											<td>消息内容</td>
+											<td>
+												<div id="textarea1" style="width:800px;">
+												    <p>全场5折！！！</p>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input class="btn btn-primary" style="margin-left: 100px;width: 300px;" type="submit" id="" name="" value="更新信息" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+	  			</div>	
+	  		</div>
+		</div>
+		<script>
+			var E = window.wangEditor;
+			var editor2 = new E('#textarea1');
+			
+			editor2.customConfig.uploadFileName = 'uploadPic';
+			editor2.customConfig.uploadImgServer = '#(b.URLQZ)/upload';
+			editor2.customConfig.showLinkImg = false;
+			
+			editor2.customConfig.menus = [
+			    'head',  // 标题
+			    'bold',  // 粗体
+			    'italic',  // 斜体
+			    'underline',  // 下划线
+			    'strikeThrough',  // 删除线
+			    'foreColor',  // 文字颜色
+			    'backColor',  // 背景颜色
+			    'link',  // 插入链接
+			    'justify',  // 对齐方式
+			    'quote',  // 引用
+			    'image',  // 插入图片
+			    'video',  //插入视频
+			    'undo',  // 撤销
+			    'redo'  // 重复
+			]
+			console.log(editor2.height);
+			editor2.customConfig.uploadImgHooks = {  
+	          
+		        success: function (xhr, editor, result) {  
+		            // 图片上传并返回结果，图片插入成功之后触发  
+		            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果  
+		            console.log('success');  
+		        },  
+		        fail: function (xhr, editor, result) {  
+		            // 图片上传并返回结果，但图片插入错误时触发  
+		            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+		            console.log(xhr);
+		            console.log(result);
+		            console.log('failll');
+		        },  
+		        error: function (xhr, editor) {  
+		            // 图片上传出错时触发  
+		            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象  
+		            console.log('error');  
+		        }
+		    }  
+		   
+			
+			editor2.create();
+			
+			
+			
+		</script>
+	</body>
+	
+</html>

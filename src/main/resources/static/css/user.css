@@ -1,0 +1,193 @@
+.container
+{
+	width: 100%;
+	height: auto;
+	min-width: 1200px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+
+
+a:link,a:visited
+{
+	color: black;
+}
+
+
+
+#lefttt
+{
+
+}
+
+#nav-pic
+{
+	margin: 0px auto;
+	margin-top: 50px;
+	border-right: 1px solid gray;
+	font-size: 100px;
+}
+
+#nav-title
+{
+	margin: 0px auto;
+	margin-top: ;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "宋体";
+	border-right: 1px solid gray;
+}
+
+.nav-sub-title
+{
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+
+#righttt
+{
+	
+}
+
+#rightt-title
+{
+	margin-top: 50px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid gray;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+#rightt-content
+{
+	font-size: 22px;
+	margin:20px 0px;
+	margin-left: 20px;
+}
+
+/*手机适配*/
+
+/***** iPad Smaller than 959px *****/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+   .container
+	{
+		width: 100%;
+		height: auto;
+		min-width: 0px;
+	}
+	
+	
+	#lefttt
+	{
+		width: 100%;
+	}
+
+	
+	#nav-pic
+	{
+		width: 100%;
+		font-size: 100px;
+		border: none;
+	}
+	
+	#nav-title
+	{
+		font-size: 24px;
+		font-weight: bold;
+		font-family: "宋体";
+		width: 100%;
+		border: none;
+	}
+	
+	.nav-sub-title
+	{
+		font-size: 18px;
+		font-family: "微软雅黑";
+		display: block;
+		border: none;
+	}
+
+	#rightt-title
+	{
+		display: none;
+	}
+	
+	#rightt-content
+	{
+		display: none;
+	}
+}
+/***** iPhone (portrait) *****/
+@media only screen and (max-width: 767px) {
+    .container
+	{
+		width: 100%;
+		height: auto;
+		min-width: 0px;
+	}
+	
+	
+	#lefttt
+	{
+		width: 100%;
+		border-bottom: 1px solid black;
+		padding-bottom: 20px;
+	}
+
+	
+	#nav-pic
+	{
+		width: 100%;
+		font-size: 100px;
+		border: none;
+	}
+	
+	#nav-title
+	{
+		font-size: 24px;
+		font-weight: bold;
+		font-family: "宋体";
+		width: 100%;
+		border: none;
+	}
+	
+	.nav-sub-title
+	{
+		font-size: 18px;
+		font-family: "微软雅黑";
+		display: block;
+		border: none;
+	}
+	
+	#righttt
+	{
+		width:100%;	
+		text-align: center;
+	}
+
+	#rightt-title
+	{
+		width: 100%;
+		display: none;
+		align-content: center;
+		
+	}
+	
+	#rightt-content
+	{
+		width: 100%;
+		font-size: 19px;
+		margin: 0px;
+		margin-top: 20px;
+	}
+}
+

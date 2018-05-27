@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!--触屏适配-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	    <title>基地查询</title>
+	
+	    <!-- Bootstrap -->
+	    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="../css/user-a.css"/>
+	    <link rel="stylesheet" href="../component/font-awesome-4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<!--导航栏-->
+				<div id="lefttt-a" align="center" class="col-xs-2 col-sm-2 col-md-2">
+					<div id="nav-pic-a" >
+						<i class="fa fa-industry"></i>
+					</div>
+					<div id="nav-title-a">
+						农场基地管理
+						<div class="nav-sub-title-a"> 
+							<a href="./landgroup-select.html">基地查询</a>
+						</div>
+						<div class="nav-sub-title-a">
+							<a href="./landgroup-add.html">基地添加</a>
+						</div>
+					</div>
+				</div>
+				<!--内容展示-->
+	  			<div id="righttt-a" class="col-xs-10 col-sm-10 col-md-10">
+	  				<div id="rightt-title-a">
+	  					基地查询
+	  				</div>
+	  				<div id="rightt-content-a">
+	  					<div class="bs-docs-example">
+							<form class="form-inline" action="find_user" method="post" >
+								<input style="width:200px;" id="find_usera" name="find_usera" type="text" class="form-control" placeholder="搜索基地"/>
+								<input type="submit"   class="btn btn-primary" name="" id="" value="搜索" />
+							</form>
+							
+							<form action="" method="post">
+								<table id="del-tb" class="table table-striped table-bordered" >
+									<thead>
+										<tr align="center">
+											<td width="200">基地编号</td>
+											<td width="180">基地名</td>
+											<td width="150">总面积</td>
+											<td width="180">负责人</td>
+											<td width="270">操作</td>
+										</tr>
+									</thead>
+									<tbody align="center">
+										<tr>
+											<td>1</td>
+											<td>
+												大渡口基地
+											</td>
+											<td>2000平米</td>
+											<td>杨睿</td>
+											<td>
+												<button type="button" class="btn btn-primary" onclick="WatchU();">查看</button>
+												<button type="button" class="btn btn-primary" onclick="ChangeU();">修改</button>
+												<button type="button" class="btn btn-danger" onclick="DeleteU();">删除</button>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>
+												沙坪坝基地
+											</td>
+											<td>3000平米</td>
+											<td>赵辉</td>
+											<td>
+												<button type="button" class="btn btn-primary" onclick="WatchU();">查看</button>
+												<button type="button" class="btn btn-primary" onclick="ChangeU();">修改</button>
+												<button type="button" class="btn btn-danger" onclick="DeleteU();">删除</button>
+											</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>
+												大坪基地
+											</td>
+											<td>500平米</td>
+											<td>周云宇</td>
+											<td>
+												<button type="button" class="btn btn-primary" onclick="WatchU();">查看</button>
+												<button type="button" class="btn btn-primary" onclick="ChangeU();">修改</button>
+												<button type="button" class="btn btn-danger" onclick="DeleteU();">删除</button>
+											</td>
+										</tr><tr>
+											<td>4</td>
+											<td>
+												大堰基地
+											</td>
+											<td>1000平米</td>
+											<td>魏浩</td>
+											<td>
+												<button type="button" class="btn btn-primary" onclick="WatchU();">查看</button>
+												<button type="button" class="btn btn-primary" onclick="ChangeU();">修改</button>
+												<button type="button" class="btn btn-danger" onclick="DeleteU();">删除</button>
+											</td>
+										</tr><tr>
+											<td>5</td>
+											<td>
+												郊区基地
+											</td>
+											<td>1000平米</td>
+											<td>杨睿</td>
+											<td>
+												<button type="button" class="btn btn-primary" onclick="WatchU();">查看</button>
+												<button type="button" class="btn btn-primary" onclick="ChangeU();">修改</button>
+												<button type="button" class="btn btn-danger" onclick="DeleteU();">删除</button>
+											</td>
+										</tr>
+										
+										
+										<tr align="center" style="font-size: 18px;">
+											<td colspan="5">
+												<a href="#(b.URLQZ)/user_view?page=#(onpage-1)">上一页</a>
+												第 2/3页
+												<a href="#(b.URLQZ)/user_view?page=#(onpage+1)">下一页</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+	  			</div>	
+	  		</div>
+		</div>
+		<div class="WatchU" id="WatchU_">
+			<div class="detailU">
+				<div class="topU">
+					基地信息查看
+				</div>
+				<div class="contentU">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td width="200"  align="center">基地编号</td>
+							<td>沙坪坝基地</td>
+						</tr>
+						<tr>
+							<td  align="center">默认土地大小</td>
+							<td>20平米</td>
+						</tr>
+						<tr>
+							<td  align="center">默认土地价格</td>
+							<td>
+								1288/块
+							</td>
+						</tr>
+						<tr>
+							<td  align="center">使用率</td>
+							<td>66/99</td>
+						</tr>
+						
+					</table>
+				</div>
+				<div class="taskU">
+					<button type="button" class="btn btn-primary" onclick="WatchUClose();">关闭</button>
+				</div>
+			</div>										
+		</div>
+		<div class="DeleteU" id="DeleteU">
+			<div class="detailU">
+				<div class="topU">
+					基地删除确认框
+				</div>
+				<div class="contentU">
+					<div style='font-size:24px; padding-top:30px; padding-left:30px;'>是否删除基地</div><div style='color:red;font-size:20px; padding-left:180px;'>沙坪坝基地</div>
+				</div>
+				<div class="taskUU">
+					<button type="button" class="btn btn-danger" onclick="DeleteUCloseS();">确认</button>
+					<button type="button" class="btn btn-primary" onclick="DeleteUClose();">取消</button>
+				</div>
+			</div>										
+		</div>
+		
+		<script>
+			var del_id;
+			function showMsg()
+			{
+				if("#(msg)" != "")
+				{
+					alert("#(msg)");
+				}
+			}
+			
+			function WatchU(id)
+			{
+				$("#WatchU_"+id).show();
+			}
+			
+			function WatchU()
+			{
+				$("#WatchU_").show();
+			}
+			
+			function WatchUClose(id)
+			{
+				$("#WatchU_"+id).hide();
+			}
+			
+			function WatchUClose()
+			{
+				$("#WatchU_").hide();
+			}
+			
+			function ChangeU(id)
+			{
+				$("#ChangeU_"+id).show();
+			}
+			
+			function ChangeU()
+			{
+				window.location="./landgroup-update.html"
+			}
+			
+			function ChangeUClose(id)
+			{
+				$("#ChangeU_"+id).hide();
+			}
+			
+			function ChangeUClose()
+			{
+				$("#ChangeU_").hide();
+			}
+			
+			function ChangeUCloseS(id)
+			{
+				var role = $("#role_now_"+id).val();
+
+				if(role == "管理员")
+					role = 1;
+				else
+					role = 2;
+				
+				location.href ="#(b.URLQZ)/update_user?id="+id+"&role="+role+"&real_name="+$("#real_name_now_"+id).val();
+
+				
+			}
+			
+			function ChangeUCloseS()
+			{
+				var role = $("#role_now_").val();
+
+				if(role == "管理员")
+					role = 1;
+				else
+					role = 2;
+				
+				location.href ="#(b.URLQZ)/update_user?id="+id+"&role="+role+"&real_name="+$("#real_name_now_"+id).val();
+
+				
+			}
+			
+			function DeleteU(id, user)
+			{
+				$("#DeleteU").show();
+				$("#delinfo").html("<div style='font-size:24px; padding-top:30px; padding-left:30px;'>是否删除用户</div>"+"<div style='color:red;font-size:20px; padding-left:180px;'>"+user+"</div>");
+				del_id = id;
+			}
+			
+			function DeleteU()
+			{
+				$("#DeleteU").show();
+				$("#delinfo").html("<div style='font-size:24px; padding-top:30px; padding-left:30px;'>是否删除用户</div>"+"<div style='color:red;font-size:20px; padding-left:180px;'>"+user+"</div>");
+				del_id = id;
+			}
+			
+			function DeleteUClose()
+			{
+				$("#DeleteU").hide();
+			}
+			function DeleteUCloseS()
+			{
+				$("#DeleteU").hide();
+				location.href ="#(b.URLQZ)/del_user?id="+del_id;
+			}
+		</script>
+	</body>
+	
+</html>
