@@ -2,7 +2,7 @@ package com.ccnc.bean;
 
 // 摄像头
 public class Camera {
-    // 摄像头的所属基地、序号、监控区域、启用时间、检修时间、状态
+    // 摄像头的所属基地、序号、监控区域、启用时间、检修时间、状态、管理员ID
     private Integer id;
     private int landgroup_id;
     private int num;
@@ -10,17 +10,27 @@ public class Camera {
     private String use_time;
     private String check_time;
     private int statu;
+    private int admin_id;
 
     public Camera() {
     }
 
-    public Camera(int landgroup_id, int num, String area, String use_time, String check_time, int statu) {
+    public Camera(int landgroup_id, int num, String area, String use_time, String check_time, int statu, int admin_id) {
         this.landgroup_id = landgroup_id;
         this.num = num;
         this.area = area;
         this.use_time = use_time;
         this.check_time = check_time;
         this.statu = statu;
+        this.admin_id = admin_id;
+    }
+
+    public int getAdmin_id() {
+        return admin_id;
+    }
+
+    public void setAdmin_id(int admin_id) {
+        this.admin_id = admin_id;
     }
 
     public Integer getId() {
@@ -45,6 +55,20 @@ public class Camera {
 
     public void setNum(int num) {
         this.num = num;
+    }
+
+    @Override
+    public String toString() {
+        return "Camera{" +
+                "id=" + id +
+                ", landgroup_id=" + landgroup_id +
+                ", num=" + num +
+                ", area='" + area + '\'' +
+                ", use_time='" + use_time + '\'' +
+                ", check_time='" + check_time + '\'' +
+                ", statu=" + statu +
+                ", admin_id=" + admin_id +
+                '}';
     }
 
     public String getArea() {
@@ -79,18 +103,6 @@ public class Camera {
         this.statu = statu;
     }
 
-    @Override
-    public String toString() {
-        return "Camera{" +
-                "id=" + id +
-                ", landgroup_id=" + landgroup_id +
-                ", num=" + num +
-                ", area='" + area + '\'' +
-                ", use_time='" + use_time + '\'' +
-                ", check_time='" + check_time + '\'' +
-                ", statu=" + statu +
-                '}';
-    }
 }
 
 

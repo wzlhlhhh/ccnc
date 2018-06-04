@@ -11,13 +11,13 @@ import java.util.List;
 @Mapper
 public interface UserDao {
     // 增加用户
-    boolean insertUser(User user);
+    User insertUser(User user);
 
     // 更改用户
-    boolean updateUser(User user);
+    void updateUser(User user);
 
     // 删除用户
-    boolean deleteUserById(int id);
+    void deleteUserById(int id);
 
     // 查询所有
     List<User> selectAllUser();
@@ -30,6 +30,9 @@ public interface UserDao {
 
     // 按用户名查询
     List<User> selectUserByName(String username);
+
+    // 按详细用户名查询
+    User selectUserByUserName(String username);
 
     // 按用户名密码查询
     User selectUserByNAP(User user);

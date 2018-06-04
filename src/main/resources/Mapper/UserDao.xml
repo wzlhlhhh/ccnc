@@ -30,6 +30,10 @@
         select * from system_user
         where user_name like "%" #{username} "%"
     </select>
+    <select id="selectUserByUserName" resultMap="UserMap">
+        select * from system_user
+        where user_name=#{username}
+    </select>
     <select id="selectUserByNAP" resultMap="UserMap">
         select * from system_user
         where user_name=#{username} and pass_word=#{password}

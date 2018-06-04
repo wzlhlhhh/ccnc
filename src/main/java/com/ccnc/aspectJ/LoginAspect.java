@@ -1,6 +1,5 @@
 package com.ccnc.aspectJ;
 
-import com.sun.deploy.net.HttpUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.context.annotation.Configuration;
@@ -28,8 +27,8 @@ public class LoginAspect {
     public void user_login()  {
         HttpServletRequest request =((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         HttpSession session = request.getSession();
-        System.out.println("登录用户:"+ session.getAttribute("user"));
         String filePath = "d:/菜菜农场/loginlog/"+session.getAttribute("user")+".txt";
+
         try {
             RandomAccessFile rf = new RandomAccessFile(filePath, "rw");
             // 文件长度，字节数

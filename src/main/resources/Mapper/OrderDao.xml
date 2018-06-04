@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ccnc.dao.OrderDao">
+    <insert id="insertOrder" useGeneratedKeys="true" keyProperty="id" keyColumn="id" parameterType="Order">
+        insert into order_detail(uuid, user_id, land_id, use_time, price, notice, start_time, end_time, statu)
+        values (#{uuid}, #{user_id}, #{land_id}, #{use_time}, #{price}, #{notice}, #{start_time}, #{end_time}, #{statu});
+    </insert>
+    <delete id="deleteOrder" >
+        delete from order_detail
+        where id=#{id}
+    </delete>
+    <select id="selectOrderById" resultType="Order">
+        select * from order_detail
+        where id=#{id}
+    </select>
+    <select id="selectOrderByUser" resultType="Order">
+        select * from content_comment
+        where user_id=#{id} and statu=1
+    </select>
+    <select id="selectCommentByName" resultType="Comment">
+        select * from content_comment
+        where content like "%" #{name} "%"
+    </select>
+    <select id="selectCommentByUserId" resultType="Comment">
+         select * from content_comment
+        where user_id=#{user_id}
+    </select>
+</mapper>

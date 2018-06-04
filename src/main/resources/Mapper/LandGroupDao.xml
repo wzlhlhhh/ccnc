@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ccnc.dao.LandGroupDao">
+    <select id="selectAllLandGroup" resultType="LandGroup">
+        select * from land_group
+    </select>
+    <select id="selectLandGroupById" resultType="LandGroup">
+        select * from land_group
+        where id=#{id}
+    </select>
+</mapper>

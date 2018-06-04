@@ -23,13 +23,13 @@
 						<i class="fa fa-bell"></i>
 					</div>
 					<div id="nav-title-a">
-						农场消息管理
-						<div class="nav-sub-title-a"> 
+						<a href="./message-select.html">农场消息管理</a>
+						<!--<div class="nav-sub-title-a"> 
 							<a href="./message-select.html">消息查询</a>
 						</div>
 						<div class="nav-sub-title-a">
 							<a href="./message-add.html">消息添加</a>
-						</div>
+						</div>-->
 					</div>
 				</div>
 				<!--内容展示-->
@@ -42,6 +42,7 @@
 							<form class="form-inline" action="find_user" method="post" >
 								<input style="width:200px;" id="find_usera" name="find_usera" type="text" class="form-control" placeholder="搜索消息"/>
 								<input type="submit"   class="btn btn-primary" name="" id="" value="搜索" />
+								<input type="button" class="btn btn-danger" onclick="window.location='./message-add.html'" value="创建消息" />
 							</form>
 							
 							<form action="" method="post">

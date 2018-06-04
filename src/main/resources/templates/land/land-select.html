@@ -23,13 +23,13 @@
 						<i class="fa fa-anchor"></i>
 					</div>
 					<div id="nav-title-a">
-						农场土地管理
-						<div class="nav-sub-title-a"> 
+						<a href="./land-select.html">农场土地管理</a>
+						<!--<div class="nav-sub-title-a"> 
 							<a href="./land-select.html">土地查询</a>
 						</div>
 						<div class="nav-sub-title-a">
 							<a href="./land-add.html">土地添加</a>
-						</div>
+						</div>-->
 					</div>
 				</div>
 				<!--内容展示-->
@@ -42,6 +42,7 @@
 							<form class="form-inline" action="find_user" method="post" >
 								<input style="width:200px;" id="find_usera" name="find_usera" type="text" class="form-control" placeholder="搜索土地"/>
 								<input type="submit"   class="btn btn-primary" name="" id="" value="搜索" />
+								<input type="button" class="btn btn-danger" onclick="window.location='./land-add.html'" value="添加土地" />
 							</form>
 							
 							<form action="" method="post">

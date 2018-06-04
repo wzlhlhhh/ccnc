@@ -2,25 +2,71 @@ package com.ccnc.bean;
 
 // 基地类
 public class LandGroup {
-    // 基地的基本信息，包括面积、基地名、默认单块土地大小和价格、利用率0/99、管理员
+    // 基地的基本信息，包括面积、基地名、默认单块土地大小和价格、利用率0/99、管理员ID、星级、农场主人数、位置
     private Integer id;
     private int area;
     private String name;
     private int one_area;
     private double one_price;
     private String use_num;
-    private String administrator;
+    private int admin_id;
+    private String star;
+    private int owner_num;
+    private String location;
 
     public LandGroup() {
     }
 
-    public LandGroup(int area, String name, int one_area, double one_price, String use_num, String administrator) {
+    public LandGroup(int area, String name, int one_area, double one_price, String use_num, int admin_id, String star, int owner_num, String location) {
         this.area = area;
         this.name = name;
         this.one_area = one_area;
         this.one_price = one_price;
         this.use_num = use_num;
-        this.administrator = administrator;
+        this.admin_id = admin_id;
+        this.star = star;
+        this.owner_num = owner_num;
+        this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "LandGroup{" +
+                "id=" + id +
+                ", area=" + area +
+                ", name='" + name + '\'' +
+                ", one_area=" + one_area +
+                ", one_price=" + one_price +
+                ", use_num='" + use_num + '\'' +
+                ", admin_id=" + admin_id +
+                ", star='" + star + '\'' +
+                ", owner_num=" + owner_num +
+                ", location='" + location + '\'' +
+                '}';
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public int getOwner_num() {
+        return owner_num;
+    }
+
+    public void setOwner_num(int owner_num) {
+        this.owner_num = owner_num;
+    }
+
+    public String getStar() {
+        return star;
+    }
+
+    public void setStar(String star) {
+        this.star = star;
     }
 
     public Integer getId() {
@@ -71,24 +117,12 @@ public class LandGroup {
         this.use_num = use_num;
     }
 
-    public String getAdministrator() {
-        return administrator;
+    public int getAdmin_id() {
+        return admin_id;
     }
 
-    public void setAdministrator(String administrator) {
-        this.administrator = administrator;
+    public void setAdmin_id(int admin_id) {
+        this.admin_id = admin_id;
     }
 
-    @Override
-    public String toString() {
-        return "LandGroup{" +
-                "id=" + id +
-                ", area=" + area +
-                ", name='" + name + '\'' +
-                ", one_area=" + one_area +
-                ", one_price=" + one_price +
-                ", use_num='" + use_num + '\'' +
-                ", administrator='" + administrator + '\'' +
-                '}';
-    }
 }
